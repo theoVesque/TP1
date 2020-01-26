@@ -14,6 +14,7 @@ Pour Linux, vous pouvez passer par un `sudo apt install git-all`.
 Une fois l'installation terminée, ouvrez un terminal et tapez `git --version`. Vous devriez avoir une réponse du type :
 
 ```bash
+$ git --version
 git version 2.15.1.windows.2
 ```
 
@@ -32,13 +33,13 @@ Git trace les changements apportés par les différents contributeurs d'un proje
 - une adresse mail
 
 ```bash
-git config --global user.name "John Doe"
-git config --global user.email johndoe@example.com
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
 ```
 Il s'agit de la configuration minimale obligatoire pour utiliser Git. Néanmoins, certaines configurations de base peuvent vous être utiles :
 
 ```bash
-git config --global core.editor vim  ## Configurer l'éditeur de texte pour éditer les messages de commit.
+$ git config --global core.editor vim  ## Configurer l'éditeur de texte pour éditer les messages de commit.
 ```
 
 ___
@@ -55,7 +56,7 @@ Un dépôt Git (ou *Git repository*) est un simple répertoire contenant un doss
 > **Manipulation** : Pour créer un dépôt Git, créez un répertoire sur votre poste, placez-vous à l'intérieur et exécutez la commande suivante.
 >
 > ```bash
-> git init
+> $ git init
 > ```
 
 ### Cloner un dépôt existant
@@ -68,6 +69,7 @@ Ce sujet de TP est d'ailleurs versionné avec Git, et libre d'accès. Nous allon
 >
 > Vous devez avoir un résultat de ce type :
 > ```bash
+> $ git clone https://github.com/sjaupart/git-init.git
 > Cloning into 'git-init'...
 > remote: Enumerating objects: 223, done.
 > remote: Total 223 (delta 0), reused 0 (delta 0), pack-reused 223R
@@ -79,7 +81,7 @@ Le clonage a créé un répertoire *git-init* qui est notre dépôt Git.
 
 > **Information** : En dehors des commandes `config`, `init` et `clone`, les commandes Git ne peuvent s'exécuter que dans un dépôt Git. Une commande Git exécutée hors dépôt vous enverra ce message explicite :
 >
-> git log
+> $ git log
 > fatal: Not a git repository (or any of the parent directories): .git
 
 ___
@@ -99,7 +101,7 @@ Précédemment, vous avez cloné ce sujet de TP sur votre poste. Nous allons con
 > **Manipulation** : Exécutez la commande
 >
 > ```bash
-> git log
+> $ git log
 > ```
 
 L'historique affiché vous montre l'ensemble des changements apportés au projet et classés de manière antichronologique.
@@ -123,15 +125,15 @@ Chaque bloc apparaissant dans l'historique correspond à un **commit** (ou *inst
 
 Un *commit* est caractérisé par :
   * un **identifiant** (une chaîne de 40 caractères hexadécimaux appelé **empreinte SHA-1**),
-  * un auteur,
-  * une date de création,
-  * un message explicatif (rédigé par l'auteur),
-  * un ensemble de changements (non affiché par défaut).
+  * un **auteur**,
+  * une **date de création**,
+  * un **message explicatif** (rédigé par l'auteur),
+  * un **ensemble de changements** (non affiché par défaut).
 
 > **Manipulation** : Plus concrètement, pour afficher l'historique avec le détail des changements pour chaque fichier du projet, ajoutez l'option `-p` à la commande précédente.
 >
 > ```bash
-> git log -p
+> $ git log -p
 > ```
 >
 > Les changements sont représentés par des ajouts et suppressions de lignes (caractérisés respectivement par des `+` et des `-` au début de chaque ligne modifiée).
@@ -153,13 +155,14 @@ Dans la section précédente, nous avons vu comment consulter l'historique d'un 
 > **Manipulation** : Prenons la commande suivante stylisant le `log` :
 >
 > ```bash
-> git log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'
+> $ git log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'
 >```
 >
 > Même si, plutôt que de retaper entièrement la commande, vous faites une recherche de celle-ci via un [`history`](https://mediatemple.net/community/products/dv/204404624/using-the-history-command), cela reste peu pratique. A la place, privilégiez la création d'un alias.
+>
 > **Manipulation** : Créez un alias `lg` :
 > ```bash
-> git config --global alias.lg "log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'"
+> $ git config --global alias.lg "log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'"
 >```
 >
 > Cette commande crée un alias `lg` pour la commande `log` customisée.

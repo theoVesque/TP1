@@ -2,8 +2,8 @@
 
 ## La brève introduction
 
-
 ___
+
 ## Et c'est parti ! (Installation et configuration)
 
 ### Installation
@@ -18,7 +18,7 @@ $ git --version
 git version 2.15.1.windows.2
 ```
 
-### Quels outils pour utiliser Git ?
+### Quels outils pour utiliser Git
 
 Idéalement, nous privilégierons le **terminal de commande**. Il existe une multitude d'outils graphiques facilitant l'utilisation de Git, mais, dans une grande majorité des cas, ces derniers ne supportent l'entiéreté des commandes et options possibles en ligne de commande.
 
@@ -29,6 +29,7 @@ Vous trouverez tout de même une [liste d'outils graphiques](#liste-doutils-grap
 ### Première configuration
 
 Git trace les changements apportés par les différents contributeurs d'un projet. Pour pouvoir apporter des changements à un projet, il est nécessaire de fournir votre identité, à savoir :
+
 - un prénom et nom
 - une adresse mail
 
@@ -36,6 +37,7 @@ Git trace les changements apportés par les différents contributeurs d'un proje
 $ git config --global user.name "John Doe"
 $ git config --global user.email johndoe@example.com
 ```
+
 Il s'agit de la configuration minimale obligatoire pour utiliser Git. Néanmoins, certaines configurations de base peuvent vous être utiles :
 
 ```bash
@@ -43,9 +45,11 @@ $ git config --global core.editor vim  ## Configurer l'éditeur de texte pour é
 ```
 
 ___
+
 ## Démarrer sur un projet
 
 Il existe deux manières pour commencer à travailler sur un dépôt Git :
+
 - Initialiser un nouveau projet.
 - Cloner un projet existant.
 
@@ -68,6 +72,7 @@ Ce sujet de TP est d'ailleurs versionné avec Git, et libre d'accès. Nous allon
 > **Manipulation** : Clonez ce projet : `git clone https://github.com/sjaupart/git-init.git`
 >
 > Vous devez avoir un résultat de ce type :
+>
 > ```bash
 > $ git clone https://github.com/sjaupart/git-init.git
 > Cloning into 'git-init'...
@@ -85,14 +90,16 @@ Le clonage a créé un répertoire *git-init* qui est notre dépôt Git.
 > fatal: Not a git repository (or any of the parent directories): .git
 
 ___
+
 ## Utilisation basique
 
 Dans cette partie, nous allons aborder les commandes permettant une utilisation de base de Git (nous n'aborderons pas encore la gestion des branches et la collaboration entre contributeurs d'un même projet).
 
 Nous verrons comment :
-  * consulter l'historique d'un projet,
-  * différencier deux versions à un instant T,
-  * publier un changement.
+
+- consulter l'historique d'un projet,
+- différencier deux versions à un instant T,
+- publier un changement.
 
 ### Analyser l'historique du projet
 
@@ -124,11 +131,12 @@ Date:   Sat Mar 15 16:40:33 2008 -0700
 Chaque bloc apparaissant dans l'historique correspond à un **commit** (ou *instantané* en français, nous utiliserons néanmoins le terme *commit* pour le reste du TP).
 
 Un *commit* est caractérisé par :
-  * un **identifiant** (une chaîne de 40 caractères hexadécimaux appelé **empreinte SHA-1**),
-  * un **auteur**,
-  * une **date de création**,
-  * un **message explicatif** (rédigé par l'auteur),
-  * un **ensemble de changements** (non affiché par défaut).
+
+- un **identifiant** (une chaîne de 40 caractères hexadécimaux appelé **empreinte SHA-1**),
+- un **auteur**,
+- une **date de création**,
+- un **message explicatif** (rédigé par l'auteur),
+- un **ensemble de changements** (non affiché par défaut).
 
 > **Manipulation** : Plus concrètement, pour afficher l'historique avec le détail des changements pour chaque fichier du projet, ajoutez l'option `-p` à la commande précédente.
 >
@@ -141,10 +149,11 @@ Un *commit* est caractérisé par :
 On a tendance à privilégier l'usage d'outils graphiques à la ligne de commande pour la consultation de l'historique d'un projet. En ligne de commande, et même sans l'option `-p`, le `log` peut être assez verbeux. Néanmoins, cette commande possède un très grand nombre d'options pour simplifier l'affichage, rechercher des informations, ... et il est profitable de l'associer avec certaines options.
 
 Parmi les options à utiliser avec la commande `log`, nous avons l'option :
-  * `--oneline` : affiche les informations d'un *commit* sur une ligne.
-  * `--graph` : affiche l'historique du projet sous forme de graphe (utile pour l'affichage des différentes branches que nous verrons dans la suite de ce TP).
-  * `--decorate` : affiche le nom des références (branches, tags, ...) dans l'historique.
-  * `--abbrev-commit` : limitant la taille des SHA-1 de *commit* à 7 caractères au lieu de 40 (les 7 premiers caractères étant suffisants à l'identification d'un *commit*).
+
+- `--oneline` : affiche les informations d'un *commit* sur une ligne.
+- `--graph` : affiche l'historique du projet sous forme de graphe (utile pour l'affichage des différentes branches que nous verrons dans la suite de ce TP).
+- `--decorate` : affiche le nom des références (branches, tags, ...) dans l'historique.
+- `--abbrev-commit` : limitant la taille des SHA-1 de *commit* à 7 caractères au lieu de 40 (les 7 premiers caractères étant suffisants à l'identification d'un *commit*).
 
 > **Manipulation** : Exécutez la commande `git log` en associant les différentes options citées ci-dessus. Vous constaterez que seules les informations utiles à l'affichage sont présentées.
 
@@ -161,6 +170,7 @@ Dans la section précédente, nous avons vu comment consulter l'historique d'un 
 > Même si, plutôt que de retaper entièrement la commande, vous faites une recherche de celle-ci via un [`history`](https://mediatemple.net/community/products/dv/204404624/using-the-history-command), cela reste peu pratique. A la place, privilégiez la création d'un alias.
 >
 > **Manipulation** : Créez un alias `lg` :
+>
 > ```bash
 > $ git config --global alias.lg "log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'"
 >```
@@ -172,6 +182,7 @@ Dans la section précédente, nous avons vu comment consulter l'historique d'un 
 > **Information** : A noter que les configurations Git possibles grâce à la commande `config` peuvent être définies à différents niveaux : **global**, **system** et **local**. Nous n'utiliserons que la configuration globale pour ce TP.
 
 ___
+
 ## Gestion des branches
 
 ## Partage et mise à jour
@@ -180,4 +191,4 @@ ___
 
 ### Liste d'outils graphiques
 
-* Git GUI (Windows, Linux, MacOS)
+- Git GUI (Windows, Linux, MacOS)

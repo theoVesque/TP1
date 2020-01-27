@@ -2,6 +2,31 @@
 
 ## La brève introduction
 
+### La gestion de versions
+
+### Les systèmes de gestion de versions
+
+Les systèmes de gestion de versions (ou *VCS*) sont utilisés pour faciliter la gestion de versions. En outre, ils vous permettront de :
+
+* enregistrer les modifications apportées à un projet,
+* visualiser les changements à travers le temps,
+* revenir à un état précédent,
+* détecter plus facilement les modifications porteuses d'erreurs.
+
+Les *VCS* diminuent la crainte du changement et permet de revenir à un état stable du projet à n'importe quel moment.
+
+#### Les types de *VCS*
+
+Il existe plusieurs types de *VCS* :
+
+* les ***VCS* centralisés** ou *CVCS* (Subversion, Perforce, ...) : ce type de *VCS* fournit un dépôt central situé sur un serveur sur lequels les contributeurs du projet peuvent se connecter, et extraire ses fichiers pour les modifier. L'inconvénient de ces systèmes est justement la centralisation du dépôt qui, en cas d'indisponibilité du serveur central, peut empêcher les contributeurs du projet de travailler.
+
+![](img/cvcs.png)
+
+* les ***VCS* décentralisés** ou *DVCS* (*Git*, *Mercurial*, ...) : ce type de *VCS* pallient aux inconvénients des *CVCS*. La mise à jour des fichiers ne passe plus par l'extraction de ces fichiers, mais par la duplication même du dépôt. Chaque contributeur peut travailler indépendamment des autres contributeurs et sans connexion permanente avec le serveur central.
+
+![](img/dvcs.png)
+
 ___
 
 ## Et c'est parti ! (Installation et configuration)
@@ -30,8 +55,8 @@ Vous trouverez tout de même une [liste d'outils graphiques](#liste-doutils-grap
 
 Git trace les changements apportés par les différents contributeurs d'un projet. Pour pouvoir apporter des changements à un projet, il est nécessaire de fournir votre identité, à savoir :
 
-- un prénom et nom
-- une adresse mail
+* un prénom et nom
+* une adresse mail
 
 ```bash
 $ git config --global user.name "John Doe"
@@ -50,8 +75,8 @@ ___
 
 Il existe deux manières pour commencer à travailler sur un dépôt Git :
 
-- Initialiser un nouveau projet.
-- Cloner un projet existant.
+* Initialiser un nouveau projet.
+* Cloner un projet existant.
 
 ### Initialiser un nouveau dépôt
 
@@ -97,9 +122,9 @@ Dans cette partie, nous allons aborder les commandes permettant une utilisation 
 
 Nous verrons comment :
 
-- consulter l'historique d'un projet,
-- différencier deux versions à un instant T,
-- publier un changement.
+* consulter l'historique d'un projet,
+* différencier deux versions à un instant T,
+* publier un changement.
 
 ### Analyser l'historique du projet
 
@@ -132,11 +157,11 @@ Chaque bloc apparaissant dans l'historique correspond à un **commit** (ou *inst
 
 Un *commit* est caractérisé par :
 
-- un **identifiant** (une chaîne de 40 caractères hexadécimaux appelé **empreinte SHA-1**),
-- un **auteur**,
-- une **date de création**,
-- un **message explicatif** (rédigé par l'auteur),
-- un **ensemble de changements** (non affiché par défaut).
+* un **identifiant** (une chaîne de 40 caractères hexadécimaux appelé **empreinte SHA-1**),
+* un **auteur**,
+* une **date de création**,
+* un **message explicatif** (rédigé par l'auteur),
+* un **ensemble de changements** (non affiché par défaut).
 
 > **Manipulation** : Plus concrètement, pour afficher l'historique avec le détail des changements pour chaque fichier du projet, ajoutez l'option `-p` à la commande précédente.
 >
@@ -148,12 +173,12 @@ Un *commit* est caractérisé par :
 
 On a tendance à privilégier l'usage d'outils graphiques à la ligne de commande pour la consultation de l'historique d'un projet. En ligne de commande, et même sans l'option `-p`, le `log` peut être assez verbeux. Néanmoins, cette commande possède un très grand nombre d'options pour simplifier l'affichage, rechercher des informations, ... et il est profitable de l'associer avec certaines options.
 
-Parmi les options à utiliser avec la commande `log`, nous avons l'option :
+Parmi les options les plus importantes à utiliser avec la commande `log`, nous avons :
 
-- `--oneline` : affiche les informations d'un *commit* sur une ligne.
-- `--graph` : affiche l'historique du projet sous forme de graphe (utile pour l'affichage des différentes branches que nous verrons dans la suite de ce TP).
-- `--decorate` : affiche le nom des références (branches, tags, ...) dans l'historique.
-- `--abbrev-commit` : limitant la taille des SHA-1 de *commit* à 7 caractères au lieu de 40 (les 7 premiers caractères étant suffisants à l'identification d'un *commit*).
+* `--oneline` : affiche les informations d'un *commit* sur une ligne.
+* `--graph` : affiche l'historique du projet sous forme de graphe (utile pour l'affichage des différentes branches que nous verrons dans la suite de ce TP).
+* `--decorate` : affiche le nom des références (branches, tags, ...) dans l'historique.
+* `--abbrev-commit` : limitant la taille des SHA-1 de *commit* à 7 caractères au lieu de 40 (les 7 premiers caractères étant suffisants à l'identification d'un *commit*).
 
 > **Manipulation** : Exécutez la commande `git log` en associant les différentes options citées ci-dessus. Vous constaterez que seules les informations utiles à l'affichage sont présentées.
 
@@ -191,4 +216,14 @@ ___
 
 ### Liste d'outils graphiques
 
-- Git GUI (Windows, Linux, MacOS)
+* Git GUI (Windows, Linux, MacOS)
+
+## Glossaire
+
+* **Dépôt** : Répertoire géré par un *VCS* permettant le stockage et le contrôle des versions d'un ensemble de fichiers.
+* **VCS** (*Version Control System*) : Outil utilisé pour la gestion de version.
+
+## Référence
+
+* [Site officiel de Git](https://git-scm.com)
+* [Pro Git Book](https://git-scm.com/book/fr/v2)

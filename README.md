@@ -55,7 +55,7 @@ Vous trouverez tout de même une [liste d'outils graphiques](#liste-doutils-grap
 
 Git trace les changements apportés par les différents contributeurs d'un projet. Pour pouvoir apporter des changements à un projet, il est nécessaire de fournir votre identité, à savoir :
 
-* un prénom et nom
+* un prénom et nom (ou pseudo)
 * une adresse mail
 
 ```bash
@@ -205,6 +205,76 @@ Dans la section précédente, nous avons vu comment consulter l'historique d'un 
 > **Manipulation** : Vous pouvez exécuter la commande `git lg` et constater la bonne configuration de l'alias.
 
 > **Information** : A noter que les configurations Git possibles grâce à la commande `config` peuvent être définies à différents niveaux : **global**, **system** et **local**. Nous n'utiliserons que la configuration globale pour ce TP.
+
+### Où suis-je positionné dans l'historique
+
+L'historique affichable par la commande `log` liste les changements apportés à un projet dans le temps. Avec un *VCS*, nous savons que nous pouvons revenir à un état précédent dans le dépôt, mais encore faut-il savoir où on se trouve.
+
+Si vous exécutez la commande `git lg` créée précédemment, vous verrez dans l'historique une référence `HEAD` définissant l'endroit où nous nous trouvons dans le projet. Généralement, la référence `HEAD` pointe sur une branche (`master`, ...) ou un tag, mais nous détaillerons ça plus tard.
+
+### Créer un commit
+
+Nous savons désormais consulter l'historique de ce projet. Dans cette section, nous allons apprendre à versionner des changements que vous allez faire sur ce projet.
+
+#### Les différents états d'un fichier
+
+Sous Git, il existe trois grands états dans lesquels les fichiers peuvent se trouver :
+
+* le **répertoire de travail** (*working directory*) : contient les changements que vous avez apportés au projet. Il correspond à votre travail en cours.
+* l'**index** (*staging area*): recense toutes les modifications des fichiers prêtes à être versionné.
+* l'**historique** ou le **dépôt** (*repository*) : contient l'ensemble des commits du projet.
+
+![](img/git_file_states.png)
+
+> **Manipulation** : Pour consulter l'état courant du dépôt, vous pouvez utiliser la commande :
+>
+> ```bash
+> $ git status
+> ```
+
+Cette commande classera les modifications de fichiers en trois sections :
+
+* les **fichiers enregistrés dans l'index** (*changes to be committed* ou *staged*) : géré par l'index, donc prêt à être versionné,
+* les **fichiers en cours de modification** (*changes not staged for commit* ou *modified*) : recense les modifications qui diffèrent de l'index, donc en cours de travail,
+* les **fichiers non suivis** (*untracked files*) : concerne tous les nouveaux fichiers inconnus (non versionnés) du dépôt.
+
+![](img/git_files.png)
+
+> **Manipulation** : Modifiez n'importe quel fichier de ce projet, et lancez un `git status`.
+>
+> Le fichier modifié apparaîtra dans le répertoire de travail.
+
+#### Versionner un changement
+
+> **Information** : Vous serez amené à saisir des messages de commit. Si vous souhaitez utiliser un éditeur de texte particulier, vous pouvez utiliser la commande suivante :
+>
+> ```
+> $ git config --global core.editor vim  ## pour utiliser Vim
+> $ git config --global core.editor nano ## pour utiliser Nano
+> etc...
+> ```
+
+Si vous avez modifié un fichier d'un dépôt Git, celui-ci apparaîtra dans le répertoire de travail. Les fichiers apparaissant à cet endroit peuvent être ajoutés à l'index et versionné grâce à la commande `git commit`.
+
+> **Manipulation** : Ajoutez le fichier modifié à l'index :
+>
+> ```bash
+> $ git add README.md
+> ```
+>
+> Le fichier *README* est ajouté à l'index. Vous pouvez vérifier cela grâce à un `git status`.
+>
+> Le fichier peut être versionné :
+>
+> ```bash
+> $ git commit
+> ```
+>
+> Un éditeur par défaut est censé s'ouvrir pour vous permettre de saisir votre message de commit. Saisissez-le, enregistrez-le et fermez l'éditeur.
+>
+> Le commit est créé.
+>
+> Vous pouvez consulter l'historique et voir qu'il a bien été créé.
 
 ___
 

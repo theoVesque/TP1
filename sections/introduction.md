@@ -35,8 +35,8 @@ Il existe plusieurs types de *VCS* :
 
 L'outil présente de nombreux avantages :
 
-1. Il est rapide : La quasi-totalité de ses opérations s'effectue en local, donc pas d'appel réseau à chaque exécution d'une commande.
-2. il est décentralisé : le dépôt est dupliqué en local. On peut donc travailler localement sans dépendre du dépôt central situé sur un serveur. Même si le dépôt central est corrompu, les contributeurs ayant cloné le projet ont une copie locale du dépôt et peuvent toujours le repousser sur un serveur.
-3. Il utilise un modèle basé sur les branches : Sous Git, un historique de versions n'est pas linéaire. On peut créer des branches pour gérer des versions alternatives du projet.
+1. Il est **rapide** : La quasi-totalité de ses opérations s'effectue en local, donc pas d'appel réseau à chaque exécution d'une commande.
+2. Il est **décentralisé** : le dépôt est dupliqué en local. On peut donc travailler localement sans dépendre du dépôt central situé sur un serveur. Même si le dépôt central est corrompu, les contributeurs ayant cloné le projet ont une copie locale du dépôt et peuvent toujours le repousser sur un serveur.
+3. Il utilise un **modèle basé sur les branches** : Sous Git, un historique de versions n'est pas linéaire. On peut créer des branches pour gérer des versions alternatives du projet.
 
 ___

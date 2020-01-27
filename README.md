@@ -7,7 +7,7 @@ Ce TP a pour objectif de vous faire découvrir la gestion de versions et ses out
 3. [Démarrer avec un projet](sections/how-to-start.md)
 4. [Les commandes de base](sections/basic-usage.md)
 5. [Gestion des branches](sections/branch.md)
-6. [La collaboration sous Git](sections.collaboration.md)
+6. [La collaboration sous Git](sections/pushing.md)
 
 ## En supplément...
 

@@ -12,7 +12,7 @@ Nous verrons comment :
 
 Précédemment, vous avez cloné ce sujet de TP sur votre poste. Nous allons consulter son historique pour connaître les changements apportés à ce projet.
 
-> **Manipulation** : Exécutez la commande
+> **Manipulation** : Exécutez la commande :
 >
 > ```bash
 > $ git log

@@ -1,6 +1,6 @@
-## Et c'est parti ! (Installation et configuration)
+# Et c'est parti ! (Installation et configuration)
 
-### Installation
+## Installation
 
 Pour Windows, vous pouvez télécharger Git sur le [site officiel](http://git-scm.com).
 Pour Linux, vous pouvez passer par un `sudo apt install git-all`.
@@ -12,7 +12,7 @@ $ git --version
 git version 2.15.1.windows.2
 ```
 
-### Quels outils pour utiliser Git
+## Quels outils pour utiliser Git
 
 Idéalement, nous privilégierons le **terminal de commande**. Il existe une multitude d'outils graphiques facilitant l'utilisation de Git, mais, dans une grande majorité des cas, ces derniers ne supportent l'entiéreté des commandes et options possibles en ligne de commande.
 
@@ -20,7 +20,7 @@ Dans un premier temps, il sera préférable d'apprendre par la ligne de commande
 
 Vous trouverez tout de même une [liste d'outils graphiques](#liste-doutils-graphiques) à la fin de ce TP.
 
-### Première configuration
+## Première configuration
 
 Git trace les changements apportés par les différents contributeurs d'un projet. Pour pouvoir apporter des changements à un projet, il est nécessaire de fournir votre identité, à savoir :
 

@@ -1,4 +1,4 @@
-## Utilisation basique
+# Utilisation basique
 
 Dans cette partie, nous allons aborder les commandes permettant une utilisation de base de Git (nous n'aborderons pas encore la gestion des branches et la collaboration entre contributeurs d'un même projet).
 
@@ -8,7 +8,7 @@ Nous verrons comment :
 * différencier deux versions à un instant T,
 * publier un changement.
 
-### Analyser l'historique du projet
+## Analyser l'historique du projet
 
 Précédemment, vous avez cloné ce sujet de TP sur votre poste. Nous allons consulter son historique pour connaître les changements apportés à ce projet.
 
@@ -64,7 +64,7 @@ Parmi les options les plus importantes à utiliser avec la commande `log`, nous 
 
 > **Manipulation** : Exécutez la commande `git log` en associant les différentes options citées ci-dessus. Vous constaterez que seules les informations utiles à l'affichage sont présentées.
 
-### Utilisation des alias
+## Utilisation des alias
 
 Dans la section précédente, nous avons vu comment consulter l'historique d'un projet avec `git log` et ses options. Cependant, il est incommode de saisir cette commande avec ses options à chaque fois juste pour une consultation d'historique. Git simplifie l'usage de ses commandes, notamment par la création d'**alias**.
 
@@ -88,17 +88,17 @@ Dans la section précédente, nous avons vu comment consulter l'historique d'un 
 
 > **Information** : A noter que les configurations Git possibles grâce à la commande `config` peuvent être définies à différents niveaux : **global**, **system** et **local**. Nous n'utiliserons que la configuration globale pour ce TP.
 
-### Où suis-je positionné dans l'historique
+## Où suis-je positionné dans l'historique
 
 L'historique affichable par la commande `log` liste les changements apportés à un projet dans le temps. Avec un *VCS*, nous savons que nous pouvons revenir à un état précédent dans le dépôt, mais encore faut-il savoir où on se trouve.
 
 Si vous exécutez la commande `git lg` créée précédemment, vous verrez dans l'historique une référence `HEAD` définissant l'endroit où nous nous trouvons dans le projet. Généralement, la référence `HEAD` pointe sur une branche (`master`, ...) ou un tag, mais nous détaillerons ça plus tard.
 
-### Créer un commit
+## Créer un commit
 
 Nous savons désormais consulter l'historique de ce projet. Dans cette section, nous allons apprendre à versionner des changements que vous allez faire sur ce projet.
 
-#### Les différents états d'un fichier
+### Les différents états d'un fichier
 
 Sous Git, il existe trois grands états dans lesquels les fichiers peuvent se trouver :
 
@@ -126,7 +126,7 @@ Cette commande classera les modifications de fichiers en trois sections :
 >
 > Le fichier modifié apparaîtra dans le répertoire de travail.
 
-#### Versionner un changement
+### Versionner un changement
 
 > **Information** : Vous serez amené à saisir des messages de commit. Si vous souhaitez utiliser un éditeur de texte particulier, vous pouvez utiliser la commande suivante :
 >
@@ -158,7 +158,7 @@ Si vous avez modifié un fichier d'un dépôt Git, celui-ci apparaîtra dans le 
 >
 > Vous pouvez consulter l'historique et voir qu'il a bien été créé.
 
-### En conclusion
+## En conclusion
 
 Nous avons vu comment :
 

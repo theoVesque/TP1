@@ -13,7 +13,7 @@ Les systèmes de gestion de versions (ou *VCS*) sont utilisés pour faciliter la
 * revenir à un état précédent,
 * détecter plus facilement les modifications porteuses d'erreurs.
 
-Les *VCS* diminuent la crainte du changement et permet de revenir à un état stable du projet à n'importe quel moment.
+Les *VCS* éliminent la crainte du changement et permet de revenir à un état stable du projet à n'importe quel moment.
 
 #### Les types de *VCS*
 
@@ -200,7 +200,7 @@ Dans la section précédente, nous avons vu comment consulter l'historique d'un 
 > $ git config --global alias.lg "log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'"
 >```
 >
-> Cette commande crée un alias `lg` pour la commande `log` customisée.
+> Cette commande crée un alias `lg` pour la commande `log` customisée avec ces options.
 >
 > **Manipulation** : Vous pouvez exécuter la commande `git lg` et constater la bonne configuration de l'alias.
 
@@ -275,6 +275,17 @@ Si vous avez modifié un fichier d'un dépôt Git, celui-ci apparaîtra dans le 
 > Le commit est créé.
 >
 > Vous pouvez consulter l'historique et voir qu'il a bien été créé.
+
+## En conclusion
+
+Nous avons vu comment :
+
+* consulter l'historique d'un projet Git,
+* créer des alias,
+* connapitre l'état des répertoires de travail,
+* versionner un ensemble de fichiers.
+
+Pour le moment, nous n'avons travaillé que sur une seule branche. Dans la partie suivante, nous allons découvrir le système de branches de Git.
 
 ___
 

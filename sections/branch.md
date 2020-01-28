@@ -10,9 +10,9 @@ A l'initialisation d'un dépôt (`init` ou `clone`), vous êtes automatiquement 
 
 Lorsque votre `HEAD` (c'est-à-dire, votre position dans l'historique) pointe sur l'étiquette d'une branche et que vous faites un commit :
 
-1. le commit est créé,
-2. le commit prend en tant que parent le commit pointé par la branche,
-3. la branche se positionne sur le commit créé (facilement vérifiable avec un `git log`).
+1. le *commit* est créé,
+2. le *commit* prend en tant que parent le *commit* pointé par la branche,
+3. la branche se positionne sur le *commit* nouvellement créé (facilement vérifiable avec un `git log`).
 
 C'est ce qui s'est passé tout à l'heure lorsque que vous avez créé votre premier commit sur `master`.
 

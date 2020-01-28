@@ -31,12 +31,12 @@ Il existe plusieurs types de *VCS* :
 
 ## Git
 
-*Git* est un *DVCS* libre et open-source initié par Linus Torvalds. Il s'agit du *VCS* le plus utilisé au monde (Subversion arrive en seconde place).
+*Git* est un *DVCS* libre et open-source initié par Linus Torvalds. Il s'agit du *VCS* le plus utilisé au monde (le *CVCS* Subversion arrive en seconde place).
 
 L'outil présente de nombreux avantages :
 
 1. Il est **rapide** : La quasi-totalité de ses opérations s'effectue en local, donc pas d'appel réseau à chaque exécution d'une commande.
 2. Il est **décentralisé** : le dépôt est dupliqué en local. On peut donc travailler localement sans dépendre du dépôt central situé sur un serveur. Même si le dépôt central est corrompu, les contributeurs ayant cloné le projet ont une copie locale du dépôt et peuvent toujours le repousser sur un serveur.
-3. Il utilise un **modèle basé sur les branches** : Sous Git, un historique de versions n'est pas linéaire. On peut créer des branches pour gérer des versions alternatives du projet.
+3. Il utilise un **modèle basé sur les branches** : Sous Git, un historique de versions n'est pas linéaire. On peut créer des branches pour gérer des versions alternatives du projet, cela permet d'isoler les évolutions d'une version et de les reporter sur une version une fois le travail terminé .
 
 ___

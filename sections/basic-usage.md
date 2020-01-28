@@ -43,6 +43,7 @@ Un *commit* est caractérisé par :
 * un **auteur**,
 * une **date de création**,
 * un **message explicatif** (rédigé par l'auteur),
+* une **référence vers un commit parent**,
 * un **ensemble de changements** (non affiché par défaut).
 
 > **Manipulation** : Plus concrètement, pour afficher l'historique avec le détail des changements pour chaque fichier du projet, ajoutez l'option `-p` à la commande précédente.
@@ -164,7 +165,7 @@ Nous avons vu comment :
 
 * consulter l'historique d'un projet Git,
 * créer des alias,
-* connapitre l'état des répertoires de travail,
+* connaître l'état des répertoires de travail,
 * versionner un ensemble de fichiers.
 
 Pour le moment, nous n'avons travaillé que sur une seule branche. Dans la partie suivante, nous allons découvrir le système de branches de Git.

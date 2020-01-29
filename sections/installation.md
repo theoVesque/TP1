@@ -14,7 +14,7 @@ git version 2.15.1.windows.2
 
 ## Quels outils pour utiliser Git
 
-Idéalement, nous privilégierons le **terminal de commande**. Il existe une multitude d'outils graphiques facilitant l'utilisation de Git, mais, dans une grande majorité des cas, ces derniers ne supportent l'entiéreté des commandes et options possibles en ligne de commande.
+Idéalement, nous privilégierons le **terminal de commande**. Il existe une multitude d'outils graphiques facilitant l'utilisation de Git, mais, dans une grande majorité des cas, ces derniers ne supportent pas l'entiéreté des commandes et options possibles en ligne de commande.
 
 Dans un premier temps, il sera préférable d'apprendre par la ligne de commande avant d'utiliser une interface graphique servant de surcouche, pour mieux appréhender et comprendre l'intérêt et les possibilités de Git.
 

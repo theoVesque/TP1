@@ -22,6 +22,7 @@ Ce TP a pour objectif de vous faire découvrir la gestion de versions et ses out
 * **Dépôt** : Répertoire géré par un *VCS* permettant le stockage et le contrôle des versions d'un ensemble de fichiers.
   * **Dépôt local** : Dépôt *Git* qui se trouve sur votre poste local.
   * **Dépôt distant (ou central)** : Dépôt situé sur un serveur servant de dépôt commun à tous ses contributeurs.
+* **Serveur central** : Serveur sur lequel se trouve le dépôt central.
 * **VCS** (*Version Control System*) : Outil utilisé pour la gestion de version.
 
 ## Référence

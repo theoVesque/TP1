@@ -21,11 +21,11 @@ Les *VCS* éliminent la crainte du changement et permet de revenir à un état s
 
 Il existe plusieurs types de *VCS* :
 
-* les ***VCS* centralisés** ou *CVCS* (Subversion, Perforce, ...) : ce type de *VCS* fournit un dépôt central situé sur un serveur sur lequels les contributeurs du projet peuvent se connecter, et extraire ses fichiers pour les modifier. L'inconvénient de ces systèmes est justement la centralisation du dépôt qui, en cas d'indisponibilité du serveur central, peut empêcher les contributeurs du projet de travailler.
+* les ***VCS* centralisés** ou *CVCS* (Subversion, Perforce, ...) : ce type de *VCS* fournit un dépôt central situé sur un serveur sur lequels les contributeurs du projet peuvent se connecter, et extraire ses fichiers pour les modifier. Leur utilisation est simple, mais l'inconvénient majeur de ces systèmes est justement la centralisation du dépôt qui peut empêcher les contributeurs de travailler en cas d'indisponibilité du serveur sur lequel est stocké le dépôt.
 
 ![CVCS](../img/cvcs.png)
 
-* les ***VCS* décentralisés** ou *DVCS* (*Git*, *Mercurial*, ...) : ce type de *VCS* pallient aux inconvénients des *CVCS*. La mise à jour des fichiers ne passe plus par l'extraction de ces fichiers, mais par la duplication même du dépôt. Chaque contributeur peut travailler indépendamment des autres contributeurs et sans connexion permanente avec le serveur central.
+* les ***VCS* décentralisés** ou *DVCS* (*Git*, *Mercurial*, ...) : ce type de *VCS* pallient aux inconvénients des *CVCS*. La mise à jour des fichiers ne passe plus par l'extraction de ces fichiers, mais par la duplication du dépôt central. Chaque contributeur peut travailler indépendamment des autres contributeurs et sans connexion permanente avec le serveur central.
 
 ![DVCS](../img/dvcs.png)
 
@@ -37,6 +37,6 @@ L'outil présente de nombreux avantages :
 
 1. Il est **rapide** : La quasi-totalité de ses opérations s'effectue en local, donc pas d'appel réseau à chaque exécution d'une commande.
 2. Il est **décentralisé** : le dépôt est dupliqué en local. On peut donc travailler localement sans dépendre du dépôt central situé sur un serveur. Même si le dépôt central est corrompu, les contributeurs ayant cloné le projet ont une copie locale du dépôt et peuvent toujours le repousser sur un serveur.
-3. Il utilise un **modèle basé sur les branches** : Sous Git, un historique de versions n'est pas linéaire. On peut créer des branches pour gérer des versions alternatives du projet, cela permet d'isoler les évolutions d'une version et de les reporter sur une version une fois le travail terminé .
+3. Il utilise un **modèle basé sur les branches** : Sous Git, un historique de versions n'est pas linéaire. On peut créer des branches pour gérer des versions alternatives du projet, cela permet notamment de gérer différentes versions du projet, d'isoler les évolutions d'une version spécifique et de les reporter sur une version une fois le travail terminé.
 
 ___

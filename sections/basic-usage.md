@@ -104,10 +104,10 @@ Nous savons désormais consulter l'historique de ce projet. Dans cette section, 
 Sous Git, il existe trois grands états dans lesquels les fichiers peuvent se trouver :
 
 * le **répertoire de travail** (*working directory*) : contient les changements que vous avez apportés au projet. Il correspond à votre travail en cours.
-* l'**index** (*staging area*): recense toutes les modifications des fichiers prêtes à être versionné.
+* l'**index** (*staging area*): recense toutes les modifications des fichiers validées et prêtes à être versionné.
 * l'**historique** ou le **dépôt** (*repository*) : contient l'ensemble des commits du projet.
 
-![](img/git_file_states.png)
+![](../img/git_file_states.png)
 
 > **Manipulation** : Pour consulter l'état courant du dépôt, vous pouvez utiliser la commande :
 >
@@ -121,9 +121,9 @@ Cette commande classera les modifications de fichiers en trois sections :
 * les **fichiers en cours de modification** (*changes not staged for commit* ou *modified*) : recense les modifications qui diffèrent de l'index, donc en cours de travail,
 * les **fichiers non suivis** (*untracked files*) : concerne tous les nouveaux fichiers inconnus (non versionnés) du dépôt.
 
-![](img/git_files.png)
+![](../img/git_files.png)
 
-> **Manipulation** : Modifiez n'importe quel fichier de ce projet, et lancez un `git status`.
+> **Manipulation** : Modifiez le fichier README.md de ce projet, et lancez un `git status`.
 >
 > Le fichier modifié apparaîtra dans le répertoire de travail.
 
@@ -137,7 +137,7 @@ Cette commande classera les modifications de fichiers en trois sections :
 > etc...
 > ```
 
-Si vous avez modifié un fichier d'un dépôt Git, celui-ci apparaîtra dans le répertoire de travail. Les fichiers apparaissant à cet endroit peuvent être ajoutés à l'index et versionné grâce à la commande `git commit`.
+Si vous avez modifié un fichier d'un dépôt Git, celui-ci apparaîtra dans le répertoire de travail. Les fichiers apparaissant à cet endroit peuvent être ajoutés à l'index via la commande `git add` et versionné grâce à la commande `git commit`.
 
 > **Manipulation** : Ajoutez le fichier modifié à l'index :
 >
@@ -145,9 +145,11 @@ Si vous avez modifié un fichier d'un dépôt Git, celui-ci apparaîtra dans le 
 > $ git add README.md
 > ```
 >
-> Le fichier *README* est ajouté à l'index. Vous pouvez vérifier cela grâce à un `git status`.
+> Cette action signifie que nous validons les changements réalisés et que nous les préparons à être enregistrés.
 >
-> Le fichier peut être versionné :
+> Le fichier *README* est ajouté à l'index. Un `git status` vous le confirmera.
+>
+> Le changement peut être enregistré :
 >
 > ```bash
 > $ git commit
@@ -159,15 +161,75 @@ Si vous avez modifié un fichier d'un dépôt Git, celui-ci apparaîtra dans le 
 >
 > Vous pouvez consulter l'historique et voir qu'il a bien été créé.
 
+## Connaître les différences entre deux versions
+
+Avec la commande `log`, nous pouvons connaître globalement les changements d'un projet. En tant que développeur, il y a de fortes chances que vous souhaitiez connaître les détails de ces changements.
+
+Pour rappel, lorsque vous consultez des changements, ceux-ci sont représentés par des ajouts (lignes préfixées d'un `+`) et des suppressions (lignes préfixées d'un `-`).
+
+Il y a plusieurs façons de procédés :
+
+* `log -p` (vu précédemment)
+* `show <SHA1>`
+* `diff`
+
+### Connaître les changements d'un commit
+
+> **Manipulation** : Exécutez un `log` et copiez n'importe quel SHA-1. Puis lancez la commande :
+>
+> ```bash
+> $ git show <mon_SHA1>
+> ```
+>
+> Vous pourrez observer les changements du commit en question.
+
+### Différencier deux versions
+
+Exécuter sans option, le `diff` affiche les modifications présentes uniquement dans le répertoire de travail (*working directory*).
+
+> **Manipulation** : Modifiez un fichier et exécutez la commande :
+>
+> ```bash
+> $ git diff
+> ```
+>
+> Les modifications s'afficheront.
+>
+> **Information** : Si vous souhaitez annuler des changements présents dans le répertoire de travail, exécutez la commande :
+>
+> ```bash
+> $ git checkout -- <mon_fichier>
+> ```
+>
+> **Tip** : Vous pouvez en faire un alias : `git config --global alias.discard "checkout -- "`.
+
+Pour afficher les changements de l'index, nous rajouterons l'option `--staged` ou `--cached`.
+
+> **Manipulation** : Modifiez un fichier, ajoutez le fichier à l'index et exécutez la commande :
+>
+> ```bash
+> $ git diff --staged
+> ```
+>
+> Les modifications s'afficheront.
+>
+> **Information** : Si vous souhaitez dévalider des changements de l'index et les remettre dans le répertoire de travail, exécutez la commande :
+>
+> ```bash
+> $ git reset HEAD <mon_fichier>
+> ```
+>
+> **Tip** : Vous pouvez en faire un alias : `git config --global alias.unstage "reset HEAD "`.
+
 ## En conclusion
 
 Nous avons vu comment :
 
-* consulter l'historique d'un projet Git,
-* créer des alias,
-* connaître l'état des répertoires de travail,
-* versionner un ensemble de fichiers.
+* consulter l'historique d'un projet Git : `log`,
+* créer des alias : `config --global alias.<mon_alias> "<ma_commande>"`,
+* connaître l'état des répertoires de travail : `status`,
+* versionner un ensemble de fichiers : `commit`.
 
-Pour le moment, nous n'avons travaillé que sur une seule branche. Dans la partie suivante, nous allons découvrir le système de branches de Git.
+Pour le moment, nous n'avons travaillé que sur une seule branche (par défaut, la branche `master`). Dans la partie suivante, nous allons découvrir le système de branches de Git.
 
 ___

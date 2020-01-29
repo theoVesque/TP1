@@ -21,6 +21,8 @@ Il existe des plateformes permettant le stockage et la gestion du code source ve
 
 Ce sujet de TP est d'ailleurs versionné avec Git, et libre d'accès. Nous allons le cloner, et l'utiliser pour la suite de ce TP.
 
+> **Avertissement** : Evitez de cloner un dépôt *Git* à l'intérieur d'un autre dépôt. Cela peut être source d'erreurs lors d'exécutions de commandes *Git*.
+>
 > **Manipulation** : Clonez ce projet : `git clone https://github.com/sjaupart/git-init.git`
 >
 > Vous devez avoir un résultat de ce type :

@@ -16,10 +16,16 @@ Ce TP a pour objectif de vous faire découvrir la gestion de versions et ses out
 
 * Git GUI (Windows, Linux, MacOS)
 
+### Plateformes de gestion de dépôt
+
+* [GitHub](https://github.com/)
+* [GitLab](https://about.gitlab.com/)
+* [BitBucket](https://bitbucket.org/)
+
 ## Glossaire
 
 * **Contributeur** : Personne travaillant sur le même dépôt *Git* que vous.
-* **Dépôt** : Répertoire géré par un *VCS* permettant le stockage et le contrôle des versions d'un ensemble de fichiers.
+* **Dépôt** (ou *repository*) : Répertoire géré par un *VCS* permettant le stockage et le contrôle des versions d'un ensemble de fichiers.
   * **Dépôt local** : Dépôt *Git* qui se trouve sur votre poste local.
   * **Dépôt distant (ou central)** : Dépôt situé sur un serveur servant de dépôt commun à tous ses contributeurs.
 * **Serveur central** : Serveur sur lequel se trouve le dépôt central.

@@ -2,6 +2,17 @@
 
 ## Installation
 
+> **Information**
+>
+> Avant d'installer Git en local, vous pouvez vérifier si il n'est pas déjà installé. Pour cela, exécutez la commande `git --version` :
+>
+> Si celle-ci vous retourne un numéro de version comme ci-dessous, c'est que Git est déjà installé et vous pourrez donc passer à l'étape de configuration (voir plus bas).
+>
+> ```bash
+> $ git --version
+> git version 2.15.1.windows.2
+> ```
+
 Pour Windows, vous pouvez télécharger Git sur le [site officiel](http://git-scm.com).
 Pour Linux, vous pouvez passer par un `sudo apt install git-all`.
 
@@ -35,7 +46,7 @@ $ git config --global user.email johndoe@example.com
 Il s'agit de la configuration minimale obligatoire pour utiliser Git. Néanmoins, certaines configurations de base peuvent vous être utiles :
 
 ```bash
-$ git config --global core.editor vim  ## Configurer l'éditeur de texte pour éditer les messages de commit.
+$ git config --global core.editor nano  ## Configurer l'éditeur de texte pour éditer les messages de commit.
 ```
 
 ___

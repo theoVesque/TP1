@@ -4,7 +4,9 @@
 
 La gestion de version consiste à gérer les modifications apportées à un ensemble de fichiers d'un projet, et à garder tous les états par lesquels ils sont passés.
 
-Avant l'arrivée des systèmes de gestion de versions, il était ordinaire de conserver le code source sous archive ZIP et de stocker cela sur un serveur pour le partager avec d'autres collaborateurs. C'était une pratique fastidieuse, car réalisée manuellement et source d'erreurs. Les systèmes de gestion de version ont grandement simplifié la gestion du code source.
+Avant l'arrivée des systèmes de gestion de versions, il était ordinaire de conserver le code source sous archive ZIP et de stocker cela sur un serveur pour le partager avec d'autres collaborateurs. C'était une pratique fastidieuse, car réalisée manuellement et source d'erreurs.
+
+Les systèmes de gestion de version ont grandement simplifié la gestion du code source en offrant des outils .
 
 ## Les systèmes de gestion de versions
 
@@ -15,7 +17,9 @@ Les systèmes de gestion de versions (ou *VCS*) sont utilisés pour faciliter la
 * revenir à un état précédent,
 * détecter plus facilement les modifications porteuses d'erreurs.
 
-Les *VCS* éliminent la crainte du changement et permet de revenir à un état stable du projet à n'importe quel moment. Vous pouvez donc expérimenter toute sorte de chose sur votre projet sans risquer de perdre des informations.
+Les *VCS* éliminent la crainte du changement et permet de revenir à un état stable du projet à n'importe quel moment. Vous pouvez donc réaliser toute sorte d'expérimentation sur votre projet sans risquer de perdre des informations.
+
+Tout projet réalisé en entreprise utilise un *VCS*.
 
 ### Les types de *VCS*
 

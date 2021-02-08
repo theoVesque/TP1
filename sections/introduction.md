@@ -2,7 +2,7 @@
 
 ## La gestion de versions
 
-La gestion de version consiste à gérer les modifications apportées à un ensemble de fichiers d'un projet, et à garder tous les états par lesquels ils sont passés.
+La gestion de version consiste à gérer les modifications apportées à un ensemble de fichiers d'un projet (que ce soit du code source, de la documentation, ou de la simple configuration), et à garder tous les états par lesquels ils sont passés.
 
 Avant l'arrivée des systèmes de gestion de versions, il était ordinaire de conserver le code source sous archive ZIP et de stocker cela sur un serveur pour le partager avec d'autres collaborateurs. C'était une pratique fastidieuse, car réalisée manuellement et source d'erreurs.
 

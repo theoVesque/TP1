@@ -1,10 +1,17 @@
 # Gestion des branches
 
+Une des forces principales de *Git* vient de l'_utilisation des branches_. Celles-ci sont au coeur de ce système. En travaillant sous *Git*, il est d'ailleurs recommandé de créer des branches, et ce, pour de multiples raisons :
+
+* Isoler son travail pour préparer la livraison d'une nouvelle fonctionnalité,
+* Faire des expérimentations,
+* Gérer plusieurs versions du projet,
+* Partager son travail avec d'autres personnes contributrices du projet.
+
+Nous allons voir dans cette section comment utiliser les branches pour isoler son travail et rapatrier son contenu sur une autre branche.
+
 ## Explication
 
-La force de *Git* vient de l'utilisation des branches. Les branches sont au coeur du système *Git*. Il est d'ailleurs recommandé en travaillant sous cet outil de créer des branches.
-
-Une branche est une référence pointant sur un commit. Les branches trouvent leur utilité dans le fait qu'on peut isoler un travail (donc un ensemble de commits) en cours sans polluer la branche principale commune à tous les contributeurs.
+Une branche est une référence pointant sur un commit. Les branches trouvent leur utilité dans le fait qu'on peut isoler un travail (donc un ensemble de commits) en cours sans polluer la branche principale (généralement `master`) commune à tous les contributeurs.
 
 A l'initialisation d'un dépôt (`init` ou `clone`), vous êtes automatiquement positionné sur la branche `master` (dans la première partie du TP, l'intégralité des manipulations réalisées se sont faites sur `master`).
 
@@ -41,7 +48,7 @@ Grâce au dépôt `git-init` que vous avez cloné en début de TP, nous allons m
 > $ git checkout creation-branches
 > ```
 >
-> Cette commande sert à positionner votre `HEAD` sur la référence de la branche `creation-branches`. Faites un ou deux commits sur cette branche et affichez l'historique. Vous constaterez que la branche `master` n'a pas bougé (ces fichiers n'ont pas changé), par contre, la `creation-branches` a intégré vos commits nouvellement créés. 
+> **Explication** : Cette commande sert à positionner votre `HEAD` sur la référence de la branche `creation-branches`. Faites un ou deux commits sur cette branche et affichez l'historique. Vous constaterez que la branche `master` n'a pas bougé (ces fichiers n'ont pas changé), par contre, la `creation-branches` a intégré vos commits nouvellement créés. 
 >
 > **Vous avez isolé votre travail de la branche `master`**.
 
@@ -61,7 +68,7 @@ Dans l'optique d'une branche de travail temporaire (juste pour réaliser un trav
 >
 > La fusion que vous venez de faire est censé s'etre bien passée. Les modifications que vous avez fait sur votre branche `creation-branches` ont été appliquées sur `master`. Si vous affichez l'historique du dépôt, vous verrez que `master` s'est mise à jour avec les nouveaux commits.
 >
-> **Avertissement** : Néanmoins, tout ne se passe pas toujours aussi simplement lors d'une fusion de branches. Des conflits peuvent survenir lorsqu'on fusionne deux branches divergentes (et c'est normal). Cela passe par une phase de **résolution de conflits**. La résolution d'un conflit peut être quelque chose de difficle à appréhender au premier abord, une section y est consacrée dans la suite du TP.
+> **Avertissement** : Néanmoins, tout ne se passe pas toujours aussi simplement lors d'une fusion de branches. Des conflits peuvent survenir lorsqu'on fusionne deux branches divergentes (et c'est normal). Cela passe par une phase de **résolution de conflits**. La résolution d'un conflit peut être quelque chose de difficile à appréhender au premier abord, car elle relève souvent d'une décision humaine et ne peut être résolue automatiquement. Une section y est consacrée dans la suite du TP.
 
 La branche `creation-branches` a été utilisé pour isoler un travail et a été fusionné sur `master`. Cette dernière étape faite, nous n'avons plus besoin de la branche `creation-branches`. Celle-ci peut être supprimée.
 

@@ -1,5 +1,12 @@
 # Partage et mise à jour
 
+Jusqu'ici, nous avons vu comment travailler seul sur un *dépôt local* mais, dans le milieu professionnel, il est rare de travailler seul sur un projet.
+Partager son travail est essentiel. Pour ce faire, nous aurons besoin de configurer un *dépôt distant* (également appelé *dépôt central*).
+
+Dans cette section, nous allons apprendre comment configurer ce dépôt distant et pousser nos modifications dessus.
+
+## Explication
+
 *Git* possède plus de 150 commandes différentes et, comme dit précédemment, la quasi-totalité d'entre elles agissent uniquement en local. Parmi les quelques commandes agissant en mode distant, on retrouve les plus utilisées :
 
 * `push` : pousse les changements d'une branche sur le dépôt distant,
@@ -14,13 +21,15 @@ Pour pouvoir pousser ou récupérer des références depuis un dépôt central, 
 > $ git remote -v
 > ```
 >
-> Supprimez cette configuration :
+> Supprimez cette configuration (nous partirons du principe que votre dépôt n'est pas configuré pour communiquer avec un dépôt distant) :
 >
 > ```bash
 > $ git remote remove origin
 > ```
 
 ## Création d'un dépôt distant
+
+Il existe de nombreux sites permettant de créer des dépôts distants, vous offrant la possibilité de partager votre travail et de pouvoir travailler en groupe plus facilement. Pour ce TP, nous utiliserons l'un des plus connus : *Github*.
 
 > **Manipulation** :
 >Vous allez créer votre propre dépôt distant sur GitHub.
